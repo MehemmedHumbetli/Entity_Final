@@ -14,7 +14,7 @@ public class dbCONTEXT:DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Data Source=STHQ012B-09;Initial Catalog = FakeInstagram;User ID=admin;Password=admin;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        optionsBuilder.UseSqlServer("Data Source=DESKTOP-22I7KCR;Initial Catalog = FakeInstagram;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
         base.OnConfiguring(optionsBuilder);
     }
 

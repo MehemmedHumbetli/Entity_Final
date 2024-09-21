@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\ClassLibrary.csproj" />
-    <ProjectReference Include="..\Social_Media.Project.DAL\Social_Media.Project.DAL.csproj" />
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary.csproj" />
+    <ProjectReference Include="..\Social_Media.Project.DAL1\Social_Media.Project.DAL.csproj" />
   </ItemGroup>
 
 </Project>

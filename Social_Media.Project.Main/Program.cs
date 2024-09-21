@@ -6,6 +6,7 @@ public class Project
 {
     static void Main(string[] args)
     {
+        Console.WriteLine("Start>>");
         UserDetailsRepository userDetailsRepository = new UserDetailsRepository();
         UserRepository userRepository = new UserRepository();
         PostRepository postRepository = new PostRepository();
@@ -30,19 +31,21 @@ public class Project
             UserId = 1,
         };
 
-        //CommentClass commentClass1 = new CommentClass()
-        //{
-        //    Text = "Reply",
-        //    Comment = "Yaxsi Oglan Backend devoloper olar!",
-            
-        //};
+        CommentClass commentClass1 = new CommentClass()
+        {
+            Text = "Reply",
+            Comment = "Yaxsi Oglan Backend devoloper olar!",
+
+        };
 
         userDetailsRepository.Add(user_INFO_1);
         userRepository.Add(user1);
         postRepository.Add(post1);
+        commentRepository.Add(commentClass1);
 
         userDetailsRepository.SaveChanges();
         userRepository.SaveChanges();
         postRepository.SaveChanges();
+        commentRepository.SaveChanges();
     }
 }

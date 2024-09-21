@@ -7,7 +7,6 @@ public class CommentConfiguration : IEntityTypeConfiguration<CommentClass>
 {
     public void Configure(EntityTypeBuilder<CommentClass> builder)
     {
-        builder.HasKey(x => x.Id);
         builder.Property(x => x.Text).HasMaxLength(20);
         builder.Property(x => x.Comment).HasMaxLength(250);
         builder

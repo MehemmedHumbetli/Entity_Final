@@ -11,7 +11,6 @@ public class UserDetailsConfiguration : IEntityTypeConfiguration<UserDetails>
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Name).HasMaxLength(20);
         builder.Property(x => x.Surname).HasMaxLength(20);
-        builder.Property(x => x.BirthDay.Year > 2008 ).HasMaxLength(20);
 
         builder
             .HasOne<User>()
