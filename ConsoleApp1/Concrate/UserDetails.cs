@@ -1,10 +1,18 @@
-﻿namespace ConsoleApp1.Concrate;
+﻿using ClassLibrary.Abstract;
 
+namespace ClassLibrary.Concrate;
 public class UserDetails:BaseEntity
 {
     public int Id { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
     public DateTime BirthDay { get; set; }
-    public enum Role { admin = 0, user = 1}
+    public Role UserRole { get; set; }
+
+    // Enum
+    public enum Role
+    {
+        Admin = 0,
+        User = 1
+    }
 }

@@ -1,4 +1,4 @@
-﻿using ConsoleApp1.Concrate;
+﻿using ClassLibrary.Concrate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -8,6 +8,12 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        throw new NotImplementedException();
+        builder.HasKey(x => x.Id);
+
+        builder
+            .HasOne(x => x.UserDetails)
+            .WithOne()
+            .HasForeignKey<User>(x => x.UserDetailsId);
+
     }
 }
